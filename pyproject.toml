@@ -1,0 +1,24 @@
+[tool.poetry]
+name = 'Thing'
+version = '0.1.0'
+description = ''
+authors = ['sinoroc <sinoroc.code+git@gmail.com>']
+readme = 'README.rst'
+license = 'AGPL-3.0-or-later'
+include = [
+    { path = 'CHANGELOG.rst', format = 'sdist' },
+    { path = 'thing/data/*.bin', format = 'wheel' },
+    { path = 'thing/data/*.src', format = 'sdist' },
+]
+exclude = [
+    { path = 'CHANGELOG.rst', format = 'wheel' },
+    { path = 'thing/data/*.src', format = 'wheel' },
+    'thing/data/*.not',
+]
+
+[tool.poetry.dependencies]
+python = '^3.5'
+
+[build-system]
+requires = ['poetry-core>=1.0.0']
+build-backend = 'poetry.core.masonry.api'
