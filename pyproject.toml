@@ -5,6 +5,9 @@ description = ''
 authors = ['sinoroc <sinoroc.code+git@gmail.com>']
 readme = 'README.rst'
 license = 'AGPL-3.0-or-later'
+packages = [
+    { include = 'test', format = 'sdist' }
+]
 include = [
     { path = 'CHANGELOG.rst', format = 'sdist' },
     { path = 'thing/data/*.bin', format = 'wheel' },
